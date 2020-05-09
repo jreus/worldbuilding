@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="249px"
+   height="41px"
+   viewBox="-0.5 -0.5 249 41"
+   content="&lt;mxfile host=&quot;Electron&quot; modified=&quot;2020-05-09T15:50:06.565Z&quot; agent=&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/12.9.3 Chrome/80.0.3987.158 Electron/8.2.0 Safari/537.36&quot; etag=&quot;5s4wu64_UcmsUHJV1uZl&quot; version=&quot;12.9.3&quot; type=&quot;device&quot;&gt;&lt;diagram id=&quot;idDfJg-3SzzlCDwQAZKT&quot; name=&quot;Page-1&quot;&gt;7Zxdc6IwFIZ/jZdlSMJHuK3ttjM73b1oO/txx9aozCI4SKvdX79BgoKRklYjOe7ihXqIoO+TvMlJwAEZzlY3WTif3qUjFg+wPVoNyNUAY4R8zJ+KyKuIBEEZmGTRSIS2gfvoDxNBW0SfoxFbNArmaRrn0bwZfEqThD3ljViYZemyWWycxs2zzsMJkwL3T2EsR79Fo3xaRqlrb+O3LJpMqzMjW+yZhVVhEVhMw1G6rIXI9YAMszTNy1ez1ZDFhXiVLuXnPrXs3XyxjCW5ygcuH34u7h69z9fOj4fb7zQczZPxhSvwvITxs/jF4tvmr5UEkyx9notiLMvZap/w4a+quC1/MbT5ubyesHTG8uyVFxEHukCeFTQ2rzzEcis4dnzLo24Zn9YEJ4FFfUfwFqwnm1Ns5eAvhCLvUMehkjo3X64kgbg+yYgVB0IDcrmcRjm7n4dPxd4lbxU8Ns1nsdi9yLP0NxumcZrxSJImbBOsKlhRbBzFcVVogMlwvRXxNMlFK/H42zCOJgl/nZWKXLZiquN4oya0QuJ1vjyQaMcES4xQsB+Rr5NQIBFyX0wB5PcJCJsBqDLKGqCvjw+mEOq1CSFkBiH03+R2CfXtag4UJDEb6yHSNwEXim1pI2CWSzkekI5eNw9D+nXH/+ctyqyRsNyLvwHD7oaxo7K93nR2vipZIMKWG/jbIlTWmCeExNc1VOrW+PBk+UPa0f3avW6ktRub31Jla0WwLO26jFM7i6tJZ4VJiUPq8tgtHm2GU9hIrXC5HVbxPzzEqcePrjLpVpkfJZovWLfC4WJezr6No1VBpUXaJodrr3jokLY6ihX49Wq/0yqswKu3GRrIrcK1fGePyRRxXVjksf9RK/+mPu8lpI0EsWhTfWpRt67+nl6U89nbKGrxo6svDzMNsXgHtqXLw0XQlu6ZaenyfDU8S2+RFrKly5PUICy9gwQUS0fyFLQhnu4T0J6ONOecpzZ1ZO+n1berI4V8yHhbbxMXsq8jhRTKRGPvYgHG2RVypZ4mZKrLQKBau8JUFyhrdwy1doV803xrbxEXtLVrTli1WXsHCzDWrpDK9mTt2Idt7Zqz0ZNbOzXT2rFC2mm+tbeIC9nasea0VZu1d7CAYu2V3AZau+uAtnasOR89tbXjFly9W7tC3mm8tbeJC9raNaetuqy9iwUYazd2+RRRBNvaz2wBFRu6gorPYQm1TVzQ1g50EbWLBRRrJ8auomJ7574aYNZOzmwZlRi6jFpdqA3a2tvEhWztBOgyahcLMNZ+wnS2fivBrk+tt8MuQn27p/CI5QXNFiETQBatLmxpECjiugAopK1nAQD5yFACConruyxIEn3j/dLtS563hiHf6KQNA3asgDQ6ggYSvrc+NrKJMiLXCmxXm00dOwU2mpHDKTggsChkzOeDhSIoWI6dLxuNBdkuEC6OQh59RlxcMFyOnYWbzYVgKFwUsvYz4kIpFC7HTtqN5oLt/rnwt9t/i1vvq/3nHrn+Cw==&lt;/diagram&gt;&lt;/mxfile&gt;"
+   id="svg148"
+   sodipodi:docname="RGB_NEOPIXEL_8STRIP.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata152">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     id="namedview150"
+     showgrid="false"
+     inkscape:zoom="1.4779116"
+     inkscape:cx="124.5"
+     inkscape:cy="20.5"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg148" />
+  <defs
+     id="defs2" />
+  <g
+     id="g138">
+    <rect
+       x="228"
+       y="32"
+       width="19.68"
+       height="7.87"
+       rx="1.18"
+       ry="1.18"
+       fill="#cccccc"
+       stroke="none"
+       pointer-events="all"
+       id="rect4" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g10">
+      <switch
+         id="switch8">
+        <foreignObject
+           style="overflow: visible; text-align: left;"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe flex-end; width: 18px; height: 1px; padding-top: 36px; margin-left: 228px;">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: right; ">
+              <xhtml:div
+                 style="display: inline-block; font-size: 6px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">GND</xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="246"
+           y="38"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="6px"
+           text-anchor="end"
+           id="text6">GND</text>
+      </switch>
+    </g>
+    <rect
+       x="228"
+       y="22"
+       width="19.68"
+       height="7.87"
+       rx="1.18"
+       ry="1.18"
+       fill="#cccccc"
+       stroke="none"
+       pointer-events="all"
+       id="rect12" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g18">
+      <switch
+         id="switch16">
+        <foreignObject
+           style="overflow: visible; text-align: left;"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe flex-end; width: 18px; height: 1px; padding-top: 26px; margin-left: 228px;">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: right; ">
+              <xhtml:div
+                 style="display: inline-block; font-size: 7px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">5v</xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="246"
+           y="28"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="7px"
+           text-anchor="end"
+           id="text14">5v</text>
+      </switch>
+    </g>
+    <rect
+       x="228"
+       y="11"
+       width="19.68"
+       height="7.87"
+       rx="1.18"
+       ry="1.18"
+       fill="#cccccc"
+       stroke="none"
+       pointer-events="all"
+       id="rect20" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g26">
+      <switch
+         id="switch24">
+        <foreignObject
+           style="overflow: visible; text-align: left;"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe flex-end; width: 18px; height: 1px; padding-top: 15px; margin-left: 228px;">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: right; ">
+              <xhtml:div
+                 style="display: inline-block; font-size: 6px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">OUT</xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="246"
+           y="17"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="6px"
+           text-anchor="end"
+           id="text22">OUT</text>
+      </switch>
+    </g>
+    <rect
+       x="228"
+       y="0"
+       width="19.68"
+       height="7.87"
+       rx="1.18"
+       ry="1.18"
+       fill="#cccccc"
+       stroke="none"
+       pointer-events="all"
+       id="rect28" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g34">
+      <switch
+         id="switch32">
+        <foreignObject
+           style="overflow: visible; text-align: left;"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe flex-end; width: 18px; height: 1px; padding-top: 4px; margin-left: 228px;">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: right; ">
+              <xhtml:div
+                 style="display: inline-block; font-size: 6px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">GND</xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="246"
+           y="6"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="6px"
+           text-anchor="end"
+           id="text30">GND</text>
+      </switch>
+    </g>
+    <rect
+       x="0"
+       y="0"
+       width="19.68"
+       height="7.87"
+       rx="1.18"
+       ry="1.18"
+       fill="#cccccc"
+       stroke="none"
+       pointer-events="all"
+       id="rect36" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g42">
+      <switch
+         id="switch40">
+        <foreignObject
+           style="overflow: visible; text-align: left;"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 18px; height: 1px; padding-top: 4px; margin-left: 2px;">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: left; ">
+              <xhtml:div
+                 style="display: inline-block; font-size: 6px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">GND</xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="2"
+           y="6"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="6px"
+           id="text38">GND</text>
+      </switch>
+    </g>
+    <rect
+       x="0"
+       y="11"
+       width="19.68"
+       height="7.87"
+       rx="1.18"
+       ry="1.18"
+       fill="#cccccc"
+       stroke="none"
+       pointer-events="all"
+       id="rect44" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g50">
+      <switch
+         id="switch48">
+        <foreignObject
+           style="overflow: visible; text-align: left;"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 18px; height: 1px; padding-top: 15px; margin-left: 2px;">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: left; ">
+              <xhtml:div
+                 style="display: inline-block; font-size: 6px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">OUT</xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="2"
+           y="17"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="6px"
+           id="text46">OUT</text>
+      </switch>
+    </g>
+    <rect
+       x="0"
+       y="22"
+       width="19.68"
+       height="7.87"
+       rx="1.18"
+       ry="1.18"
+       fill="#cccccc"
+       stroke="none"
+       pointer-events="all"
+       id="rect52" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g58">
+      <switch
+         id="switch56">
+        <foreignObject
+           style="overflow: visible; text-align: left;"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 18px; height: 1px; padding-top: 26px; margin-left: 2px;">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: left; ">
+              <xhtml:div
+                 style="display: inline-block; font-size: 7px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">5v</xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="2"
+           y="28"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="7px"
+           id="text54">5v</text>
+      </switch>
+    </g>
+    <rect
+       x="0"
+       y="32"
+       width="19.68"
+       height="7.87"
+       rx="1.18"
+       ry="1.18"
+       fill="#cccccc"
+       stroke="none"
+       pointer-events="all"
+       id="rect60" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g66">
+      <switch
+         id="switch64">
+        <foreignObject
+           style="overflow: visible; text-align: left;"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 18px; height: 1px; padding-top: 36px; margin-left: 2px;">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: left; ">
+              <xhtml:div
+                 style="display: inline-block; font-size: 6px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">GND</xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="2"
+           y="38"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="6px"
+           id="text62">GND</text>
+      </switch>
+    </g>
+    <rect
+       x="17"
+       y="0"
+       width="212.6"
+       height="39.37"
+       fill="#000000"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect68" />
+    <rect
+       x="19"
+       y="16"
+       width="19.68"
+       height="19.68"
+       fill="#f5f5f5"
+       stroke="none"
+       pointer-events="all"
+       id="rect70" />
+    <ellipse
+       cx="28.84"
+       cy="25.84"
+       rx="7.874"
+       ry="7.875"
+       fill="#e6e6e6"
+       stroke="none"
+       pointer-events="all"
+       id="ellipse72" />
+    <rect
+       x="32.86"
+       y="24.86"
+       width="1.97"
+       height="1.97"
+       fill="#333333"
+       stroke="none"
+       pointer-events="all"
+       id="rect74" />
+    <rect
+       x="46"
+       y="16"
+       width="19.68"
+       height="19.68"
+       fill="#f5f5f5"
+       stroke="none"
+       pointer-events="all"
+       id="rect76" />
+    <ellipse
+       cx="55.84"
+       cy="25.84"
+       rx="7.874"
+       ry="7.875"
+       fill="#e6e6e6"
+       stroke="none"
+       pointer-events="all"
+       id="ellipse78" />
+    <rect
+       x="59.86"
+       y="24.86"
+       width="1.97"
+       height="1.97"
+       fill="#333333"
+       stroke="none"
+       pointer-events="all"
+       id="rect80" />
+    <rect
+       x="73"
+       y="16"
+       width="19.68"
+       height="19.68"
+       fill="#f5f5f5"
+       stroke="none"
+       pointer-events="all"
+       id="rect82" />
+    <ellipse
+       cx="82.84"
+       cy="25.84"
+       rx="7.874"
+       ry="7.875"
+       fill="#e6e6e6"
+       stroke="none"
+       pointer-events="all"
+       id="ellipse84" />
+    <rect
+       x="86.86"
+       y="24.86"
+       width="1.97"
+       height="1.97"
+       fill="#333333"
+       stroke="none"
+       pointer-events="all"
+       id="rect86" />
+    <rect
+       x="100"
+       y="16"
+       width="19.68"
+       height="19.68"
+       fill="#f5f5f5"
+       stroke="none"
+       pointer-events="all"
+       id="rect88" />
+    <ellipse
+       cx="109.84"
+       cy="25.84"
+       rx="7.874"
+       ry="7.875"
+       fill="#e6e6e6"
+       stroke="none"
+       pointer-events="all"
+       id="ellipse90" />
+    <rect
+       x="113.86"
+       y="24.86"
+       width="1.97"
+       height="1.97"
+       fill="#333333"
+       stroke="none"
+       pointer-events="all"
+       id="rect92" />
+    <rect
+       x="127"
+       y="16"
+       width="19.68"
+       height="19.68"
+       fill="#f5f5f5"
+       stroke="none"
+       pointer-events="all"
+       id="rect94" />
+    <ellipse
+       cx="136.84"
+       cy="25.84"
+       rx="7.874"
+       ry="7.875"
+       fill="#e6e6e6"
+       stroke="none"
+       pointer-events="all"
+       id="ellipse96" />
+    <rect
+       x="140.86"
+       y="24.86"
+       width="1.97"
+       height="1.97"
+       fill="#333333"
+       stroke="none"
+       pointer-events="all"
+       id="rect98" />
+    <rect
+       x="154"
+       y="16"
+       width="19.68"
+       height="19.68"
+       fill="#f5f5f5"
+       stroke="none"
+       pointer-events="all"
+       id="rect100" />
+    <ellipse
+       cx="163.84"
+       cy="25.84"
+       rx="7.874"
+       ry="7.875"
+       fill="#e6e6e6"
+       stroke="none"
+       pointer-events="all"
+       id="ellipse102" />
+    <rect
+       x="167.86"
+       y="24.86"
+       width="1.97"
+       height="1.97"
+       fill="#333333"
+       stroke="none"
+       pointer-events="all"
+       id="rect104" />
+    <rect
+       x="181"
+       y="16"
+       width="19.68"
+       height="19.68"
+       fill="#f5f5f5"
+       stroke="none"
+       pointer-events="all"
+       id="rect106" />
+    <ellipse
+       cx="190.84"
+       cy="25.84"
+       rx="7.874"
+       ry="7.875"
+       fill="#e6e6e6"
+       stroke="none"
+       pointer-events="all"
+       id="ellipse108" />
+    <rect
+       x="194.86"
+       y="24.86"
+       width="1.97"
+       height="1.97"
+       fill="#333333"
+       stroke="none"
+       pointer-events="all"
+       id="rect110" />
+    <rect
+       x="208"
+       y="16"
+       width="19.68"
+       height="19.68"
+       fill="#f5f5f5"
+       stroke="none"
+       pointer-events="all"
+       id="rect112" />
+    <ellipse
+       cx="217.84"
+       cy="25.84"
+       rx="7.874"
+       ry="7.875"
+       fill="#e6e6e6"
+       stroke="none"
+       pointer-events="all"
+       id="ellipse114" />
+    <rect
+       x="221.86"
+       y="24.86"
+       width="1.97"
+       height="1.97"
+       fill="#333333"
+       stroke="none"
+       pointer-events="all"
+       id="rect116" />
+    <ellipse
+       cx="69.6"
+       cy="6.91"
+       rx="5.9055"
+       ry="5.905"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="ellipse118" />
+    <ellipse
+       cx="177.6"
+       cy="6.91"
+       rx="5.9055"
+       ry="5.905"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="ellipse120" />
+    <rect
+       x="24.94"
+       y="4.95"
+       width="11.81"
+       height="5.91"
+       fill="#cc6600"
+       stroke="#e6e6e6"
+       pointer-events="all"
+       id="rect122" />
+    <rect
+       x="44.94"
+       y="4.95"
+       width="11.81"
+       height="5.91"
+       fill="#cc6600"
+       stroke="#e6e6e6"
+       pointer-events="all"
+       id="rect124" />
+    <rect
+       x="81.94"
+       y="4.95"
+       width="11.81"
+       height="5.91"
+       fill="#cc6600"
+       stroke="#e6e6e6"
+       pointer-events="all"
+       id="rect126" />
+    <rect
+       x="105.94"
+       y="4.95"
+       width="11.81"
+       height="5.91"
+       fill="#cc6600"
+       stroke="#e6e6e6"
+       pointer-events="all"
+       id="rect128" />
+    <rect
+       x="155.94"
+       y="4.95"
+       width="11.81"
+       height="5.91"
+       fill="#cc6600"
+       stroke="#e6e6e6"
+       pointer-events="all"
+       id="rect130" />
+    <rect
+       x="132.94"
+       y="4.95"
+       width="11.81"
+       height="5.91"
+       fill="#cc6600"
+       stroke="#e6e6e6"
+       pointer-events="all"
+       id="rect132" />
+    <rect
+       x="188.94"
+       y="4.95"
+       width="11.81"
+       height="5.91"
+       fill="#cc6600"
+       stroke="#e6e6e6"
+       pointer-events="all"
+       id="rect134" />
+    <rect
+       x="208.94"
+       y="4.95"
+       width="11.81"
+       height="5.91"
+       fill="#cc6600"
+       stroke="#e6e6e6"
+       pointer-events="all"
+       id="rect136" />
+  </g>
+</svg>
