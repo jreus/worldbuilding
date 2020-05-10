@@ -151,9 +151,19 @@ void loop() {
 ```
 
 ## Analog Input
+Light sensor or other analog input.
 
+<fig>
+<img src="./TINY85LILY_CIRCUIT_LIGHT_SENSOR.svg">
+<figcaption>Connecting a resistive, analog sensor. In this case a light dependent resistor (LDR)</figcaption>
+</fig>
+
+## Connecting Neopixel Digitally-controlled LEDs
+
+<fig>
+<img src="./TINY85LILY_CIRCUIT_LED_STRIP.svg">
+<figcaption>Wiring to control digitally addressable LEDs like neopixel. These LEDs can be chained, adding more and more.</figcaption>
+</fig>
 
 ## Debugging
 digistump.com/wiki/digispark/tutorials/debugging
-
-## Connecting a Light Sensor
