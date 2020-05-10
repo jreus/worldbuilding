@@ -33,6 +33,13 @@ First see if you can successfully upload a sketch to the board. We'll use one of
 
 This circuit lights a LED from the power supplied by your board. Connect the board to a power source (USB power or computer) and connect a LED and 220 ohm resistor as shown. The LED should light up.
 
+
+<fig>
+<img src="./LED_DIAGRAM.png">
+<figcaption>The different parts of a Light Emitting Diode</figcaption>
+</fig>
+
+
 <fig>
 <img src="./TINY85LILY_LED_CIRCUIT.png">
 <figcaption>LED Circuit Diagram</figcaption>
