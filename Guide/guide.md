@@ -159,6 +159,19 @@ Additionally, the board has three power pins:
 <figcaption>All pin functions on the LilyTiny85 board</figcaption>
 </fig>
 
+The ATTINY85 LilyPad is a sewable version of the DigiSpark ~ which is a development board based around the ATTINY85 microcontroller.
+
+<fig>
+<img src="./digispark_pinouts.png">
+<figcaption>Pin functions of the DigiSpark</figcaption>
+</fig>
+
+The ATTINY85 is great because it's very inexpensive, runs on very low power and can be programmed using the Arduino software toolkit. However, the small size comes with some limitations. Some of the most notable limitations are:
+* PIN 5 is the RESET pin on the microcontroller. This means if you connect it to ground, it will reboot your program.
+* PIN 2 and PIN 3 are used by the USB connection. So if you use these pins in your circuit, you will be unable to reprogram the board using the USB connector.
+
+Because of these limitations, we're going to avoid using PIN 2, 3 and 5 for now. There are ways of using them, but we're not going to get into that during this workshop.
+
 ## Digital Inputs
 
 <a href="https://www.kobakant.at/DIY/?p=838">All about pull-up resistors and voltage dividers on Kobakant's website.</a>
