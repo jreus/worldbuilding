@@ -410,6 +410,13 @@ void loop() {
 }
 ```
 
+## Big Circuit
+<fig>
+<img src="./TINY85LILY_ALL_CIRCUIT.png">
+<figcaption></figcaption>
+</fig>
+
+
 
 ## Debugging
 digistump.com/wiki/digispark/tutorials/debugging
