@@ -1,4 +1,4 @@
-/*
+/* 
  Pin outs:
     All pins can be used as Digital I/O
     Pin 0 → MOSI, SDA, PWM0

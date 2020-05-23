@@ -189,17 +189,214 @@ void loop() {
 ## Analog Input
 Light sensor or other analog input.
 
+Leave the vibro motor connected as it is and try building this circuit with the light sensor.
+
 <fig>
 <img src="./TINY85LILY_CIRCUIT_LIGHT_SENSOR.svg">
 <figcaption>Connecting a resistive, analog sensor. In this case a light dependent resistor (LDR)</figcaption>
 </fig>
 
+```
+#define VIB_PIN           1   // vib motor / PWM and built-in led
+#define AN_PIN            3   // one of the analog inputs
+
+void setup() {  
+  pinMode(VIB_PIN, OUTPUT);       // connect a vibro motor or LED
+  pinMode(AN_PIN, INPUT);         // connect an analog sensor here, like a LDR
+}
+
+
+void loop() {
+  int an_sig, mapped; // define some integer variables that we will use below
+
+  an_sig = analogRead(AN_PIN); // read analog sensor
+  delay(5); // small delay for stability
+
+  // usually you need to use the map() and constrain() functions
+  // to convert the range of the analog sensor to a range of values that you can use
+  // Here the functions are "nested". The innermost function (map) is the first one to execute.
+  // The result of this function then is passed to the outer function (constrain)
+  // Here we map the analog sensor value from a range of 475-605 to 0-255
+  // However, if the analog signal is outside the range of 475-605 then map
+  //  will give us a result outside the range of 0-255. This can happen because
+  //  analog sensors are often tempramental and inexact.
+  // To deal with this, we use constrain to clamp the mapped value to 0-255.
+  mapped = constrain(map(an_sig, 475, 605, 0, 255), 0, 255);
+
+  // use the mapped analog value to control the vibro motor strength
+  analogWrite(VIB_PIN, mapped);
+
+  // small delay for stability
+  delay(5);
+}
+```
+
+
 ## Connecting Neopixel Digitally-controlled LEDs
 
 <fig>
-<img src="./TINY85LILY_CIRCUIT_LED_STRIP.svg">
-<figcaption>Wiring to control digitally addressable LEDs like neopixel. These LEDs can be chained, adding more and more.</figcaption>
+<img src="./neopixel_florav2.png">
+<figcaption>The flora neopixel, a little digitally-controlled RGB LED on a sewable PCB. Too connect it, provide power on the GND and +5V pins, and connect one of the digital outputs from your microcontroller to the DATA IN pin.</figcaption>
 </fig>
+
+<fig>
+<img src="./NEOPIXEL_FLORA_TINY85LILY_CIRCUIT.png">
+<figcaption>Wiring to control digitally addressable LEDs like the neopixel. These LEDs can be chained, by connecting the OUT pin from one to the IN pin of the next one. Each one can be independently controlled in your code.</figcaption>
+</fig>
+
+The neopixel needs some extra code. You need to import a special library to be able to control it. And use the functions and datatypes inside that library to make things happen.
+
+```
+// Import the Neopixel library
+#include <Adafruit_NeoPixel.h>
+#import <math.h>
+
+#define PIX_PIN           0   // neopixel pin
+#define NUM_PIXELS        1   // the number of neopixels attached, increase this if you chain a few of them together
+
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUM_PIXELS, PIX_PIN, NEO_RGB + NEO_KHZ800);
+
+void setup() {  
+  pixels.begin();
+}
+
+void loop() {
+  pixels.setPixelColor(0, 0); // send command to turn off pixel 0
+  pixels.show(); // update the pixel display with your commands
+
+  // Tell the pixel at address 0 you want it to turn red (red, blue, green)
+  // each color value goes from 0-255
+  pixels.setPixelColor(0, pixels.Color(255, 0, 0));
+  pixels.show(); // update the neopixel
+  delay(500); // pause half a second
+
+  // The same, but blue
+  pixels.setPixelColor(0, pixels.Color(0, 255, 0));
+  pixels.show();
+  delay(500);
+
+  // The same, but green
+  pixels.setPixelColor(0, pixels.Color(0, 0, 255));
+  pixels.show();
+  delay(500);
+
+  // Red + Green
+  pixels.setPixelColor(0, pixels.Color(255, 255, 0));
+  pixels.show();
+  delay(500);
+
+  // Red + Blue
+  pixels.setPixelColor(0, pixels.Color(255, 0, 255));
+  pixels.show();
+  delay(500);
+
+   // Green + Blue
+  pixels.setPixelColor(0, pixels.Color(0, 255, 255));
+  pixels.show();
+  delay(500);
+}
+```
+
+## Fading Using Loops
+This sketch uses the same circuit, but introduces a new programming concept: the loop. There are a few different kinds of looping commands, but probably the most common is the for loop. Here we use a for loop to incrementally increase the brightness of each color of the neopixel with each loop.
+
+```
+#include <Adafruit_NeoPixel.h>
+#import <math.h>
+
+#define PIX_PIN           0   // neopixel pin
+#define NUM_PIXELS        1   // the number of neopixels attached, increase this if you chain a few of them together
+
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUM_PIXELS, PIX_PIN, NEO_RGB + NEO_KHZ800);
+
+void setup() {  
+  pixels.begin();
+}
+
+void loop() {
+  int i; // a counter variable we will use in the for loop
+
+  pixels.setPixelColor(0, 0); // send command to turn off pixel 0
+  pixels.show(); // update the pixel display with your commands
+
+
+  // Fade in red with a for loop. i counts from 0-255
+  for(i=0; i<=255; i++) {
+    pixels.setPixelColor(0, pixels.Color(i, 0, 0));
+    pixels.show();
+    delay(1); // a tiny delay
+  }
+
+
+  // Fade in green, keep red at 255
+  for(i=0; i<=255; i++) {
+    pixels.setPixelColor(0, pixels.Color(255, i, 0));
+    pixels.show();
+    delay(1);
+  }
+
+  // Fade in blue, keep red and green at 255
+  for(i=0; i<=255; i++) {
+    pixels.setPixelColor(0, pixels.Color(255, 255, i));
+    pixels.show();
+    delay(1);
+  }
+}
+```
+
+
+## Controlling the Neopixel with the LDR
+Use the LDR to control the blinking speed of the neopixel.
+
+<fig>
+<img src="./LDR_NEOPIXEL_TINY85LILY_CIRCUIT.png">
+<figcaption>LED input + Neopixel output circuit.</figcaption>
+</fig>
+
+```
+#include <Adafruit_NeoPixel.h>
+
+#define PIX_PIN           0   // neopixel data pin
+#define AN_PIN            3   // analog sensor input pin
+#define NUM_PIXELS        1   // number of neopixels attached
+
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUM_PIXELS, PIX_PIN, NEO_RGB + NEO_KHZ800);
+
+void setup() {  
+  pinMode(AN_PIN, INPUT);
+  pixels.begin();
+}
+
+int speed_ms = 100; // global variable for blink speed
+
+void loop() {
+  int analog_value;
+  analog_value = analogRead(AN_PIN);
+  delay(2); // quick delay for stability
+
+  // map/constrain the analog value to a delay time in ms
+  speed_ms = constrain(map(analog_value, 447, 605, 50, 1000), 50, 1000);
+
+  // red
+  pixels.setColor(0, pixels.Color(255,0,0));
+  pixels.show();
+
+  delay(speed_ms);
+
+  // blue
+  pixels.setColor(0, pixels.Color(0,255,0));
+  pixels.show();
+
+  delay(speed_ms);
+
+  // green
+  pixels.setColor(0, pixels.Color(0,0,255));
+  pixels.show();
+
+  delay(speed_ms);
+}
+```
+
 
 ## Debugging
 digistump.com/wiki/digispark/tutorials/debugging
