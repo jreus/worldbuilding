@@ -97,7 +97,7 @@ Try and understand the sequence of commands. Also try changing the number of mil
 
 Instead of outputting only ON and OFF, you can also use certain pins to output analog signals. Analog signals are non-binary and can vary smoothly between the two voltage extremes that the LilyTiny can handle (0-5V).
 
-The board generates analog signals using a technique called Pulse Width Modulation (PWM). Only pins 0, 1 and 4 are capable of PWM outputs.
+The board generates analog signals using a technique called Pulse Width Modulation (PWM). Only pins 0, 1 and 4 are capable of analog/PWM output.
 
 Now try uploading this sketch to your board. Keep the circuit the same. We are going to use pin 1 as an analog output instead of a digital output to make the LED fade smoothly from darkness to full brightness.
 
@@ -140,12 +140,12 @@ The board has a number of digital I/O pins as well as analog input and PWM outpu
 All the data pins for the LilyTiny85:
    All pins can be used as Digital input or digital output.
    Each pin also offers these additional functions:
-   Pin 0 → PWM0 (spi MOSI, i2c SDA)
-   Pin 1 → PWM1 (spi MISO)
-   Pin 2 → ANALOG INPUT (ADC1, spi SCLK, i2c SCL)
-   Pin 3 → ANALOG INPUT (ADC3, USB+)
-   Pin 4 → PWM4, ANALOG INPUT (ADC2, USB-)
-   Pin 5 → ANALOG INPUT (ADC0, RESET)
+   Pin 0 → PWM0 (analog output)
+   Pin 1 → PWM1 (analog output)
+   Pin 2 → ANALOG INPUT A1
+   Pin 3 → ANALOG INPUT A3, USB+
+   Pin 4 → PWM4 (analog output), ANALOG INPUT A2, USB-)
+   Pin 5 → ANALOG INPUT A0, RESET
 
 Additionally, the board has three power pins:
   GND -> Ground Reference Voltage
@@ -167,16 +167,16 @@ The ATTINY85 LilyPad is a sewable version of the DigiSpark ~ which is a developm
 </fig>
 
 The ATTINY85 is great because it's very inexpensive, runs on very low power and can be programmed using the Arduino software toolkit. However, the small size comes with some limitations. Some of the most notable limitations are:
-* PIN 5 is the RESET pin on the microcontroller. This means if you connect it to ground, it will reboot your program.
-* PIN 2 and PIN 3 are used by the USB connection. So if you use these pins in your circuit, you will be unable to reprogram the board using the USB connector.
+* PIN 5 is the RESET pin on the microcontroller. This means if you connect it to ground, it will reboot your program. In general we leave this pin alone.
+* PIN 3 and PIN 4 are used by the USB connection. So connecting certain types of circuit to these pins will make it impossible to reprogram the board using the USB connector.
 
-Because of these limitations, we're going to avoid using PIN 2, 3 and 5 for now. There are ways of using them, but we're not going to get into that during this workshop.
+Because of these limitations, we're going to try and avoid using PIN 3, 4 and especially 5 for now. There are ways of using them, but we're not going to get into that during this workshop.
 
 ## Digital Inputs
 
 <a href="https://www.kobakant.at/DIY/?p=838">All about pull-up resistors and voltage dividers on Kobakant's website.</a>
 
-Notice that the left side of the switch is connected to *TWO* other points: the left side of the resistor and PIN 4 of the LilyTiny board.
+Notice that the left side of the switch is connected to *TWO* other points: the left side of the resistor and PIN 0 of the LilyTiny board.
 
 <fig>
 <img src="./TINY85LILY_BUTTON_VIB.png">
@@ -184,16 +184,16 @@ Notice that the left side of the switch is connected to *TWO* other points: the 
 </fig>
 
 ```
-// CONTROL THE VIBRO MOTOR ON PIN 1 USING A BUTTON IN PIN 4
+// CONTROL THE VIBRO MOTOR ON PIN 1 USING A BUTTON/SWITCH IN PIN 0
 
 void setup() {
   pinMode(1, OUTPUT);
-  pinMode(4, INPUT);    // configure pin 4 to be a digital input
+  pinMode(0, INPUT);    // configure pin 0 to be a digital input
 }
 
 void loop() {
   int button_value = 0;
-  button_value = digitalRead(4);
+  button_value = digitalRead(0);
   digitalWrite(1, button_value);
   delay(10); // delay for stability
 }
@@ -211,7 +211,7 @@ Leave the vibro motor connected as it is and try building this circuit with the 
 
 ```
 #define VIB_PIN           1   // vib motor / PWM and built-in led
-#define AN_PIN            3   // one of the analog inputs
+#define AN_PIN            A1   // one of the analog inputs
 
 void setup() {  
   pinMode(VIB_PIN, OUTPUT);       // connect a vibro motor or LED
@@ -264,7 +264,7 @@ The neopixel needs some extra code. You need to import a special library to be a
 #include <Adafruit_NeoPixel.h>
 #import <math.h>
 
-#define PIX_PIN           0   // neopixel pin
+#define PIX_PIN           3   // neopixel pin
 #define NUM_PIXELS        1   // the number of neopixels attached, increase this if you chain a few of them together
 
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUM_PIXELS, PIX_PIN, NEO_RGB + NEO_KHZ800);
@@ -317,7 +317,7 @@ This sketch uses the same circuit, but introduces a new programming concept: the
 #include <Adafruit_NeoPixel.h>
 #import <math.h>
 
-#define PIX_PIN           0   // neopixel pin
+#define PIX_PIN           3   // neopixel pin
 #define NUM_PIXELS        1   // the number of neopixels attached, increase this if you chain a few of them together
 
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUM_PIXELS, PIX_PIN, NEO_RGB + NEO_KHZ800);
@@ -369,8 +369,8 @@ Use the LDR to control the blinking speed of the neopixel.
 ```
 #include <Adafruit_NeoPixel.h>
 
-#define PIX_PIN           0   // neopixel data pin
-#define AN_PIN            3   // analog sensor input pin
+#define PIX_PIN           3   // neopixel data pin
+#define AN_PIN            A1   // analog sensor input pin
 #define NUM_PIXELS        1   // number of neopixels attached
 
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUM_PIXELS, PIX_PIN, NEO_RGB + NEO_KHZ800);
@@ -411,11 +411,73 @@ void loop() {
 ```
 
 ## Big Circuit
+
+Everything connected together.
+
 <fig>
 <img src="./TINY85LILY_ALL_CIRCUIT.png">
 <figcaption></figcaption>
 </fig>
 
+```
+#include <Adafruit_NeoPixel.h>
+
+#define VIB_PIN       1
+#define SWITCH_PIN    0
+#define LDR_PIN       A1      // PIN 2, aka analog1
+#define PIXEL_PIN     3
+#define NUM_PIXELS    1       // number of neopixels attached
+
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUM_PIXELS, PIXEL_PIN, NEO_RGB + NEO_KHZ800);
+
+void setup() {  
+  pinMode(VIB_PIN, OUTPUT);
+  pinMode(SWITCH_PIN, INPUT);
+  pinMode(LDR_PIN, INPUT);
+  pixels.begin(); // initializes the neopixel data pin
+
+  // Do a little test of the Neopixel colors
+  pixels.setPixelColor(0, pixels.Color(255, 0, 0));
+  pixels.show();
+  delay(500);
+  pixels.setPixelColor(0, pixels.Color(0, 255, 0));
+  pixels.show();
+  delay(500);
+  pixels.setPixelColor(0, pixels.Color(0, 0, 255));
+  pixels.show();
+  delay(500);
+  pixels.setPixelColor(0, 0);
+  pixels.show();  
+  delay(500);
+}
+
+void loop() {
+  int analog_value, switch_value;
+  int red, green, blue;
+  analog_value = analogRead(LDR_PIN);
+  delay(5);
+  switch_value = digitalRead(SWITCH_PIN);
+  delay(5); // quick delay for stability
+
+  if(switch_value == 1) {
+    digitalWrite(VIB_PIN, 1);
+  } else {
+    digitalWrite(VIB_PIN, 0);     
+  }
+
+  // map red green blue values depending on light level
+  // analog input is somewhere between 380 (darkness) and 700 (bright light), but you can play with these values
+  // flipping the values reverses the mapping, so that 700 maps to 0 and 380 maps to 255
+  red = constrain(map(analog_value, 380, 700, 0, 255), 0, 255);    // red is on in full light and off in darkness
+  blue = constrain(map(analog_value, 700, 380, 0, 255), 0, 255);   // blue and green light up in darkness
+  green = constrain(map(analog_value, 700, 380, 0, 255), 0, 255);
+
+  pixels.setPixelColor(0, pixels.Color(red, blue, green));
+  pixels.show();
+
+  delay(20);
+}
+```
 
 
 ## Debugging
