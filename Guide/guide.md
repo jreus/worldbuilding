@@ -1,3 +1,11 @@
+TODO:
+* Redesign the guide so that it enables all the individual circuits to first be prototyped using alligator clips.
+* And to use the onboard LED as feedback.
+* Give an example for seeing the range of the light sensor.
+* Then have a stage where the students design where they want things to be on the mask, and how to route the connections so that there are no overlaps.
+* Redo all diagrams to not have overlaps.
+* Update code with correct COLOR order - GREEN, RED, BLUE
+
 # Getting Started
 
 We're using a physical computing board based on the ATTINY85 microcontroller. It's roughly a mixture of two open source designs: the DigiSpark and the Arduino LilyPad.
@@ -5,8 +13,15 @@ We're using a physical computing board based on the ATTINY85 microcontroller. It
 ## Setting up the IDE
 This only applies for Windows/OSX
 
+Windows users need to first install the DigiSpark drivers.
+https://github.com/digistump/DigistumpArduino/releases
+
 1. download and install the Arduino IDE https://www.arduino.cc/en/Main/Software
+  (Windows) If you are asked to install drivers, answer Yes to all.
 2. Go to File->Preferences and add the following additional board manager url: http://digistump.com/package_digistump_index.json
+There's a good chance you need to install the drivers yourself on Windows.
+Here's a video: https://www.youtube.com/watch?v=wq3CuJQLRaw
+
 3. Go to Tools->Board and select Board Manager
 4. Select "Contributed" from the drop-down and find the package named "Digistump AVR Boards", click the install button.
 5. If any extra windows open up (e.g. on Windows) click "agree" and "next", this will install additional drivers you may need.
@@ -437,12 +452,19 @@ void setup() {
   pixels.begin(); // initializes the neopixel data pin
 
   // Do a little test of the Neopixel colors
-  pixels.setPixelColor(0, pixels.Color(255, 0, 0));
-  pixels.show();
   delay(500);
+  // RED
   pixels.setPixelColor(0, pixels.Color(0, 255, 0));
   pixels.show();
   delay(500);
+
+  // GREEN
+  pixels.setPixelColor(0, pixels.Color(255, 0, 0));
+  pixels.show();
+  delay(500);
+
+
+  // BLUE
   pixels.setPixelColor(0, pixels.Color(0, 0, 255));
   pixels.show();
   delay(500);
@@ -470,9 +492,9 @@ void loop() {
   // flipping the values reverses the mapping, so that 700 maps to 0 and 380 maps to 255
   red = constrain(map(analog_value, 380, 700, 0, 255), 0, 255);    // red is on in full light and off in darkness
   blue = constrain(map(analog_value, 700, 380, 0, 255), 0, 255);   // blue and green light up in darkness
-  green = constrain(map(analog_value, 700, 380, 0, 255), 0, 255);
+  green = constrain(map(analog_value, 700, 380, 0, 255), 0, 128);
 
-  pixels.setPixelColor(0, pixels.Color(red, blue, green));
+  pixels.setPixelColor(0, pixels.Color(green, red, blue));
   pixels.show();
 
   delay(20);
