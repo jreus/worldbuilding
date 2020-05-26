@@ -6,6 +6,40 @@ TODO:
 * Redo all diagrams to not have overlaps.
 * Update code with correct COLOR order - GREEN, RED, BLUE
 
+Capsense:
+Install the CapsenseLibrary via Tools>Manage Libraries
+https://playground.arduino.cc/Main/CapacitiveSensor/
+
+Capsense + Vibromotor Program
+
+```
+#include <CapacitiveSensor.h>
+
+#define CAP_SENS  0
+#define CAP_SEND  4
+#define VIB_PIN   1
+
+// 1M resistor between pin 0 and 4
+// 100pF cap between pin 0 and GND
+// add a capacitive sensor (wire, foil, conductive object) to pin 0
+CapacitiveSensor capsense = CapacitiveSensor(CAP_SEND, CAP_SENS);
+
+void setup() {
+  pinMode(VIB_PIN, OUTPUT);
+  capsense.set_CS_AutocaL_Millis(0xFFFFFFFF);
+}
+
+void loop() {
+  int mappedval = 0;
+  long capval =  capsense.capacitiveSensor(30);
+  // fiddle with these values...
+  mappedval = map(capval, 300, 1600, 0, 255);
+  mappedval = constrain(mappedval, 0, 255);
+  analogWrite(VIB_PIN, mappedval);
+  delay(10); // adds stability
+}
+```
+
 # Getting Started
 
 We're using a physical computing board based on the ATTINY85 microcontroller. It's roughly a mixture of two open source designs: the DigiSpark and the Arduino LilyPad.
