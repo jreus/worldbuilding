@@ -176,21 +176,37 @@ We'll use one of the basic examples that makes the LED on the board blink. First
 
 5. The IDE is now waiting for you to plug in your board. Plug it in.
 
-6. After a moment the sketch will be uploaded to your board, the little LED should be blinking slowly. If you have problems see the troubleshooting note below.
+6. After a moment the sketch will be uploaded to your board. You should see some red text showing the upload progress and ending with the line `>> Micronucleus done. Thank you!`.
 
-(NOTE: Add animated gif of the LED blinking)
+<fig>
+<img src="./upload_success.png">
+<figcaption>successful program upload message</figcaption>
+</fig><br>
 
-(NOTE: Add images of what the success message in the IDE looks like, as well as some of the error messages)
+7. After successfully programming the board, the little LED should be blinking slowly. If you have problems getting this to work then see the troubleshooting note below.
+
+<fig>
+<img src="./blink_sketch.gif">
+<figcaption>LED blinking program</figcaption>
+</fig><br>
 
 ## Troubleshooting
 
 The upload process on these boards can be rather fiddly. Sometimes the board isn't detected after plugging it in, sometimes the upload fails inexplicably.
 
+<fig>
+<img src="./upload_error.png">
+<figcaption>one possible error message</figcaption>
+</fig><br>
+
+
+
 In most cases, the solution is to repeat the process:
 1. Unplug the USB cable
 2. Click on the Upload (Arrow) button again
 3. Wait for the console message `Plug in device now...` and then plug in the USB cable.
+4. If the programming process is successful, you should see a sequence of messages ending with `>> Micronucleus done. Thank you!`.
 
-If this keeps happening try using a different USB port on your computer.
+If you keep encountering errors, try using a different USB port on your computer.
 
 Programming errors can also be caused by connecting circuits to certain pins of the LilyPad board. But since we haven't built any circuits yet this should not be the cause of programming problems.
