@@ -1,5 +1,10 @@
-# PART 0 ~ Preparations
-This guide should be completed before we start the online course.
+# Preparations Guide
+
+Dear Students
+
+Welcome to the online class Worldbuilding technologies! You have received the kit from us. Please be advised that while we have washed/disinfected hands before touching/packaging these it’s always a good idea to disinfect package content due to COVID-19 (or wash your hands after touching the content).
+
+Please complete this guide before we start the online course.
 
 ---
 # 1. Checking your Kit
@@ -8,25 +13,53 @@ By now you should have gotten your workshop kit. The first thing to do is make s
 
 Open up the kit and identify the following components:
 
-* LilyPad ATTINY85 development board
-* Neopixel Flora RGB LED
-* Light Sensor
-* 2x 10k𝛀 resistors
-* 1x 220𝛀 resistor
-* Alligator Clips
-* Conductive thread (steel)
-* Conductive thread (copper)
-* Sewing needles
-* Fabric
-* other things...
+* 2x rolls of steel conductive thread
+* 1x roll of copper conductive thread
+* piece of neoprene
+* piece of neoprene with conductive fabric strips
+* 1x roll of normal thread
+* 2x sewing needles
+* 3x alligator clips (picture has 4)
+* 2x sewing needles
+* bag of small electronic components
+* string
+* plain facemask
 
-(NOTE: Finish this list)
-(NOTE: Provide an image with items labled)
+<fig>
+<img src="./kit_01.jpg"><br>
+<figcaption>Items in the kit</figcaption>
+</fig><br>
+
+Next examine the bag of small electronic components and identify the following:
+
+
+* 2x 10k𝛀 resistors (with rolled leads)
+* LilyPad ATTINY85 development board
+* plain old LED (could be red, yellow or green)
+* 1x 200𝛀 resistor (straight leads)
+* vibration motor
+* light sensor LDR (rolled leads)
+* Neopixel Flora RGB LED board
+* 1x piece of conductive fabric
+
+<fig>
+<img src="./kit_02.jpg"><br>
+<figcaption>Items inside the small electronic components bag</figcaption>
+</fig><br>
+
+
+In addition to the items in the kit, you should also have the following:
+* a pair of scissors
+* a USB micro data transfer cable (note: it must be a data cable, not just a charging cable)
+* optional: seam ripper (for fixing sewing mistakes)
+* optional: USB power bank (for powering your mask wirelessly)
+
+
 
 ---
 # 2. Installing Necessary Software
 
-You will need to download and install the Arduino IDE to create and upload programs to your microcontroller board. Please do this before we start the workshop, and contact us if you have any problems so we can iron those out beforehand and save time.
+Before the workshop you will need to download and install the Arduino IDE. This software is what you use to create and upload programs to your LilyPad board. Please do this before we start the workshop, and contact us if you have any problems so we can iron those out beforehand and save time.
 
 The installation process has multiple steps and is different depending on your operating system. We assume you are either using a recent version of Windows (8.1 or 10) or an Apple computer with a recent version of OSX. If you're using a flavor of Linux then please contact us.
 
@@ -58,7 +91,7 @@ If the following instructions aren't completely clear, there is a [video tutoria
 
 5. Plug your LilyPad board into your computer using a USB micro data cable. Once you've plugged it in you should see the little red power light on the board turn on.
 
-(NOTE: Have a photo of the board here?)
+(NOTE: Have a photo of the board with power light on)
 
 6. Now check to see that Windows recognizes your board. Open up `Device Manager` (you can search for it in the menu bar if you don't know where it is).
 
@@ -145,7 +178,9 @@ We'll use one of the basic examples that makes the LED on the board blink. First
 
 6. After a moment the sketch will be uploaded to your board, the little LED should be blinking slowly. If you have problems see the troubleshooting note below.
 
-(NOTE: Add images of what success looks like)
+(NOTE: Add animated gif of the LED blinking)
+
+(NOTE: Add images of what the success message in the IDE looks like, as well as some of the error messages)
 
 ## Troubleshooting
 
