@@ -2,7 +2,7 @@
 
 Dear Students
 
-Welcome to the online class Worldbuilding technologies! You have received the kit from us. Please be advised that while we have washed/disinfected hands before touching/packaging these it’s always a good idea to disinfect package content due to COVID-19 (or wash your hands after touching the content).
+Welcome to the online class Worldbuilding technologies! You have received the kit from us. Also note: we have washed/disinfected hands before touching/packaging these, but if you are concerned about virus spread you can wash your hands after handling the components.
 
 Please complete this guide before we start the online course.
 
