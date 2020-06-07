@@ -50,9 +50,9 @@ Next examine the bag of small electronic components and identify the following:
 
 In addition to the items in the kit, you should also have the following:
 * a pair of scissors
-* a USB micro data transfer cable (note: it must be a data cable, not just a charging cable)
-* optional: seam ripper (for fixing sewing mistakes)
-* optional: USB power bank (for powering your mask wirelessly)
+* a [USB micro data transfer cable](https://www.allekabels.nl/data-kabel/14/1286196/usb-micro-b-datakabel.html) (note: it must be a data cable, not just a charging cable)
+* optional: [seam ripper](https://www.youtube.com/watch?v=B7tmeBNbZ9c) (for fixing sewing mistakes)
+* optional: [USB power bank](https://www.allekabels.nl/powerbank/15477/3223374/powerbank-5000-mah.html) (for powering your mask wirelessly)
 
 
 
@@ -200,7 +200,7 @@ The upload process on these boards can be rather fiddly. Sometimes the board isn
 </fig><br>
 
 
-
+### General Solution
 In most cases, the solution is to repeat the process:
 1. Unplug the USB cable
 2. Click on the Upload (Arrow) button again
@@ -209,4 +209,15 @@ In most cases, the solution is to repeat the process:
 
 If you keep encountering errors, try using a different USB port on your computer.
 
+### Errors programming when the board is part of a circuit
 Programming errors can also be caused by connecting circuits to certain pins of the LilyPad board. But since we haven't built any circuits yet this should not be the cause of programming problems.
+
+### "bad CPU type in executable"
+Mac OSX Catalina users might encounter this error when trying to compile the example code for the first time. It happens because some Catalina no longer allows you to run 32-bit software. Usually the way to fix this is to "hide" the old 32-bit libraries that the Arduino IDE depends on, so that it instead uses its own internal 64-bit versions.
+
+1. Open up the [Terminal](https://macpaw.com/how-to/use-terminal-on-mac)
+2. Type the following command and hit enter:
+```
+mv ~/Library/Arduino15/packages/arduino/tools/avr-gcc ~/Library/Arduino15/packages/arduino/tools/avr-gcc-old
+```
+3. Quit the Arduino application if it's open and restart it
