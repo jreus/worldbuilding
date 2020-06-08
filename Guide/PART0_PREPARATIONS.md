@@ -190,7 +190,7 @@ We'll use one of the basic examples that makes the LED on the board blink. First
 <figcaption>LED blinking program</figcaption>
 </fig><br>
 
-## Troubleshooting
+# Troubleshooting
 
 The upload process on these boards can be rather fiddly. Sometimes the board isn't detected after plugging it in, sometimes the upload fails inexplicably.
 
@@ -200,8 +200,9 @@ The upload process on these boards can be rather fiddly. Sometimes the board isn
 </fig><br>
 
 
-### General Solution
-In most cases, the solution is to repeat the process:
+### General Solution to Errors
+In many cases, if an error occurs or your board isn't detected, the solution is to repeat the process:
+
 1. Unplug the USB cable
 2. Click on the Upload (Arrow) button again
 3. Wait for the console message `Plug in device now...` and then plug in the USB cable.
@@ -209,14 +210,14 @@ In most cases, the solution is to repeat the process:
 
 If you keep encountering errors, try using a different USB port on your computer.
 
-### Errors programming when the board is part of a circuit
+### Errors when the board is part of a circuit
 Programming errors can also be caused by connecting circuits to certain pins of the LilyPad board. But since we haven't built any circuits yet this should not be the cause of programming problems.
 
-### "bad CPU type in executable"
-Mac OSX Catalina users might encounter this error when trying to compile the example code for the first time. It happens because some Catalina no longer allows you to run 32-bit software. Usually the way to fix this is to "hide" the old 32-bit libraries that the Arduino IDE depends on, so that it instead uses its own internal 64-bit versions.
+### The "bad CPU type in executable" Error
+Mac OSX Catalina users might encounter this error when trying to compile the example code for the first time. It happens because Catalina no longer allows you to run 32-bit software. Usually the way to fix this is to "hide" the old 32-bit libraries that the Arduino IDE depends on, so that it instead uses its own internal 64-bit versions.
 
-1. Open up the [Terminal](https://macpaw.com/how-to/use-terminal-on-mac)
-2. Type the following command and hit enter:
+1. Open up the Terminal - if you don't know how, see: [how to open the Terminal on OSX](https://macpaw.com/how-to/use-terminal-on-mac)
+2. Type/copy-paste the following command into the terminal and hit enter:
 ```
 mv ~/Library/Arduino15/packages/arduino/tools/avr-gcc ~/Library/Arduino15/packages/arduino/tools/avr-gcc-old
 ```
