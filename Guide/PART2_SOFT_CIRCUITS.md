@@ -77,12 +77,18 @@ void loop() {
 
 
 
-## Connecting Neopixel Digitally-controlled LEDs
+# Neopixel Digitally-controlled LED
 
 <fig>
 <img src="./neopixel_florav2.png">
 <figcaption>The flora neopixel, a little digitally-controlled RGB LED on a sewable PCB. Too connect it, provide power on the GND and +5V pins, and connect one of the digital outputs from your microcontroller to the DATA IN pin.</figcaption>
 </fig>
+
+<br><br>
+
+To use the neopixel you'll need to add the NeoPixel library. In the Arduino IDE go to `Tools->Manage Libraries`. Search for `neopixel` and you should see a library called `Adafruit NeoPixel`. Install that one and wait for the installation dialogue to finish.
+
+
 
 <fig>
 <img src="./TINY85LILY_NEOPIXEL_CIRCUIT.png">
