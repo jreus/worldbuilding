@@ -270,6 +270,59 @@ void loop() {
 }
 ```
 
+# Further Reading
+
+* [Analog Inputs Tutorial on Sparkfun](https://learn.sparkfun.com/tutorials/analog-to-digital-conversion/all)
+An introduction to analog inputs. This tutorial uses the Arduino UNO as a development board, but most of it also applies to your LilyPad ATTINY85 (see [this document](https://digistump.com/wiki/digispark/tutorials/connecting#digispark_differences_and_using_arduinoprocessing_with_the_digispark) on the DigiSpark website for info on differences between your board and the bigger Arduinos).
+
+The LilyPad ATTINY85 has four analog inputs, but because there's so much other functionality crammed into the pins of this board the safest analog input to use is on pin 2 (analog 1, named 'A1' in your code). Here's an example sketch that uses an input on pin 2 (A1) to control the onboard LED.
+
+```
+int LED_PIN = 1;
+int SENSOR_PIN = A1; // use 'A1' instead of '2' when you want to use pin 2 as an analog input
+
+setup() {
+  pinMode(1, OUTPUT);
+  // you don't need to set a pinMode for analog input pins
+}
+
+loop() {
+  int brightness, analog_in;
+  analog_in = analogRead(SENSOR_PIN);
+  delay(10); // short delay for read stability
+
+  // The map() function converts one range of numbers
+  // to another. You'll have to play around with the
+  // input range to see what kind of inputs your
+  // sensor is providing.
+  brightness = map(analog_in, 100, 600, 0, 255);
+
+  // the constrain() function clips the brightness value
+  // to be between 0 and 255, map() can sometimes produce
+  // other values..
+  brightness = constrain(brightness, 0, 255);
+
+  // Write the analog value to the LED brightness
+  analogWrite(A1, brightness);
+}
+```
+
+
+
+* [An arduino Light Sensor tutorial](https://arduinogetstarted.com/tutorials/arduino-light-sensor)
+This tutorial compliments the above Sparkfun tutorial by diving into the details of connecting your Light Sensor to the board.
+
+Things can get messy if you try to sew it all together, so test this out with your alligator clips first!
+
+
+* [Kobakant's How to Get What you Want](https://www.kobakant.at/DIY/)
+Extensively documented research on electronic textile projects
+
+* [DigiSpark's Tutorials](https://digistump.com/wiki/digispark/tutorials/connecting)
+Lots of info about the DigiSpark board and its differences from its bigger Arduino cousins. All of this info applies to your LilyPad ATTINY85 boards.
+
+
+
 
 # Troubleshooting
 

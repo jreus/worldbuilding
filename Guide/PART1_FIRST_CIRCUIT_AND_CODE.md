@@ -1,9 +1,8 @@
 # Getting Started
 
-For this workshop we're using a development board built around the ATTINY85 microcontroller. It's roughly a mixture of two open source designs: the DigiSpark and the Arduino LilyPad.
+For this workshop we're using a development board built around the ATTINY85 microcontroller. It's roughly a mixture of two open source designs: the [DigiSpark](http://digistump.com/products/1) and the [Arduino LilyPad](https://www.arduino.cc/en/Main/ArduinoBoardLilyPad/).
 
 # Kit Contents
-
 
 * 2x rolls of steel conductive thread
 * 1x roll of copper conductive thread
